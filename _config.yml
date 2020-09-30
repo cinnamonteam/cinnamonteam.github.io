@@ -1,8 +1,8 @@
 title: Limey
 theme: jekyll-theme-midnight
 social:
-  github: limey
+github: limey
 
 plugins:
- - jekyll-feed
- - jekyll-seo-tag
+- jekyll-feed
+- jekyll-seo-tag
