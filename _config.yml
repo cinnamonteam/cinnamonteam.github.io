@@ -1,8 +1,7 @@
-title: PieOS Team
+title: Limey
 theme: jekyll-theme-midnight
 social:
-  twitter: pieos
-  github: pieosteam
+  github: limey
 
 plugins:
  - jekyll-feed
