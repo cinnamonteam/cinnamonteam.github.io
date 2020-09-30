@@ -6,3 +6,8 @@ social:
 plugins:
  - jekyll-feed
  - jekyll-seo-tag
+
+docs:
+
+- title: test
+  url: bruh
