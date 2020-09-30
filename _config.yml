@@ -1,1 +1,9 @@
+title: PieOS Team
 theme: jekyll-theme-midnight
+social:
+  twitter: pieos
+  github: pieosteam
+
+plugins:
+ - jekyll-feed
+ - jekyll-seo-tag
