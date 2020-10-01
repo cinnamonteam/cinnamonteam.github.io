@@ -1,7 +1,5 @@
 title: Limey
 theme: jekyll-theme-midnight
-social:
-github: limey
 
 plugins:
 - jekyll-feed
