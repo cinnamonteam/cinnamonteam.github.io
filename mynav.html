@@ -29,6 +29,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
     <style>
         .display-5 {
             font-size: 2rem;
@@ -68,45 +69,46 @@
 
     <!--end of Navigation bar-->
     <div class="jumbotron container-fluid mb-3 pt-4 pb-2 text-center">
-        <img class="mr-2" src="cnmn.png" width="10%">
-        <h2>CinnamonTeam</h2>
-        <h5>Welcome to the Cinnamon Team's Website!</h5>
+        <i class="fas fa-compass fa-3x"></i>
+        <h2>My Navigator</h2>
+        <h6>Navigate the website and docs. The docs are built in to the website.</h6>
     </div>
+    
     <div class="container">
-        <h3>CinnamonTeam Website</h3>
-        <div class="mt-3 mb-3 pb-0 alert alert-warning">
-            <i class="fas fa-hammer mr-2"></i>Hey, this site is still a work-in-progress!
-            <p class="small">Some pages are broken, other things won't work, and the site may have problems.</p>
+        <div class="mt-3 mb-3 pb-0 alert alert-info">
+            <i class="fas fa-exclamation-triangle mr-2"></i>Some Items can be outdated
+            <p class="small">We couldn't figure out how to query all of the webpages in here so we are manually adding pages to the list.</p>
         </div>
-        <h5>About Us</h5>
-        <p>We are called the Cinnamon Team because Exeon (the founder of CinnamonTeam) likes the word Cinnamon and
-            thought it would be a
-            good idea to make our new name that.</p>
-        <h5>What we Do</h5>
-        We like to do a lot of things, like these:
-        <ul>
-            <li>
-                <i class="fas fa-desktop mr-2"></i>PowerPoint Operating Systems
-            </li>
-            <li>
-                <i class="fas fa-terminal mr-2"></i>Linux Tutorials
-            </li>
-            <li>
-                <i class="fas fa-gamepad mr-2"></i>Gaming Videos
-            </li>
-            <li>
-                <i class="fas fa-code mr-2"></i>Web Development
-            </li>
-        </ul>
-        <h5>What else?</h5>
-        <ul>
-            <li>We also have a <a href="/discord/">Discord server</a>, which you can also get to from our navbar.</li>
-            <li>We also have WIP documentation. You may know us as the PieOS Team if you previously went to the <a
-                    href="http://pieos.team">PieOS
-                    website.</a></li>
-        </ul>
-    </div>
-
+        <input class="form-control" id="myInput" type="text" placeholder="Search">
+        <br>
+        <ul class="list-group mb-5" id="myList">
+          <li class="list-group-item"><a class="text-light" href="/index.html">Home</a></li>
+          <li class="list-group-item"><a class="text-light" href="/about.html">About</a></li>
+          <li class="list-group-item"><a class="text-light" href="/gitdata">GitData</a></li>
+          <li class="list-group-item"><a class="text-light" href="/people/exeonyt.html">ExeonYT</a></li>
+          <li class="list-group-item"><a class="text-light" href="/people/kat21.html">Kat21</a></li>
+          <li class="list-group-item"><a class="text-light" href="/people/objecty.html">Objecty</a></li>
+          <li class="list-group-item disabled"><i class="fas fa-times-circle mr-2"></i>CinnamonApp</li>
+          <li class="list-group-item disabled"><i class="fas fa-times-circle mr-2"></i>LemonadeApp</li>
+          <li class="list-group-item disabled"><i class="fas fa-times-circle mr-2"></i>FAQ</li>
+        </ul>  
+      </div>
+      
+      <script>
+      $(document).ready(function(){
+        $("#myInput").on("keyup", function() {
+          var value = $(this).val().toLowerCase();
+          $("#myList li").filter(function() {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+          });
+        });
+      });
+      function findallinfolderajs() {
+        $http.get('folder_to_list/').success(function(response) {
+        console.log(response);
+        });
+      }
+      </script>
 
     </div>
 
@@ -119,3 +121,4 @@
         &bull; <a href="https://github.com/Cinnamonteam/Cinnamonteam.github.io">Source Code</a>
     </p>
 </div>
+</html>
