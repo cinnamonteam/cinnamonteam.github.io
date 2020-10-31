@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>CinnamonTeam</title>
+    <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <main class="container">
+        <script>
+            // Fall back if the browser doesn't support prefers-color-scheme
+            if (window.matchMedia('(prefers-color-scheme: dark)').media === 'not all') {
+                document.head.insertAdjacentHTML(
+                    'beforeend',
+                    '<link href="themes/dark-theme.css" rel="stylesheet" onload="document.documentElement.style.display=\'\'" />'
+                );
+                window.addEventListener('load', function () {
+                    document.getElementById('not-supported-warning').style.display = '';
+                });
+            }
+        </script>
+    </main>
+    <link href="../themes/light-theme.css" rel="stylesheet" media="(prefers-color-scheme: light)" />
+    <link href="../themes/dark-theme.css" rel="stylesheet" media="(prefers-color-scheme: dark)" />
+    <script src="https://kit.fontawesome.com/cba4c22719.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+</head>
+
+<body>
+
+    <div style="margin-bottom: 75px;" id="nav">
+
+    </div>
+
+    <script>
+        $(function () {
+            $("#nav").load("/nav.html");
+        });
+    </script>
+
+    <!--end of Navigation bar-->
+    <div class="jumbotron container-fluid py-3 pb-2 text-center my-0"
+        style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%,rgba(0, 0, 0, 0.6) 100%), url(/cmn_preview.png); background-position: center; background-size: 30%;">
+        <div class="row my-5">
+            <div class="mx-auto">
+                <h2>CinnamonApp Legacy</h2>
+
+                <div class="btn-group" id="downBtn">
+                    <button type="button" onclick="hi()" class="btn btn-success"><i
+                            class="fas fa-download mr-2"></i>Windows
+                        (64-bit)</button>
+                </div>
+
+                <p class="small mt-1">for Windows only.<br>Cross-platform support is available in the new <a href="/programs/cinnamon.html">CinnamonApp</a>.</p>
+            </div>
+
+        </div>
+    </div>
+
+    </div>
+
+</body>
+<div class="footer container">
+    <hr />
+    <p class="text-center">
+        <icon class="fas mr-1 fa-copyright"></icon>cinnamon.team 2020 &bull; Made with <i class="fas fa-heart"></i>
+        using <a href="https://getbootstrap.com">Bootstrap</a> & <a href="https://fontawesome.com">Font Awesome</a>
+        &bull; <a href="https://github.com/Cinnamonteam/Cinnamonteam.github.io">Source Code</a>
+    </p>
+</div>
+
+</html>
